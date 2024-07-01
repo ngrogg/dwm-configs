@@ -22,5 +22,8 @@ cp dwm-configs/headers/st/config.h st/
 ## Put desktop session in place
 sudo cp dwm.desktop /usr/share/xsessions/
 
+## Place xprofile
+cp xprofile ~/.xprofile
+
 ## Compile software
 for i in dmenu dwm st; do cd $i; sudo make clean install; cd ..; done
