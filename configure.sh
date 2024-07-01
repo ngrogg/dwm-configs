@@ -9,12 +9,18 @@ mkdir -p ~/Documents/gits
 cd ~/Documents/gits
 
 ## Clone repos
-git clone https://git.suckless.org/dwm
-git clone https://git.suckless.org/st
 git clone https://git.suckless.org/dmenu
+git clone https://git.suckless.org/dwm
+git clone git@github.com:ngrogg/dwm-configs.git
+git clone https://git.suckless.org/st
 
 ## Put headers in place
+cp dwm-configs/headers/dmenu/config.h dmenu/
+cp dwm-configs/headers/dwm/config.h dwm/
+cp dwm-configs/headers/st/config.h st/
 
 ## Put desktop session in place
 sudo cp dwm.desktop /usr/share/xsessions/
 
+## Compile software
+for i in dmenu dwm st; do cd $i; sudo make clean install; cd ..; done
