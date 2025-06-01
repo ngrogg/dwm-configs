@@ -1,5 +1,8 @@
 # Statusbar loop
+# %F - YYYY-MM-DD
+# %H - 24 hour
+# %M - Minute
 while true; do
-  xsetroot -name "$( date +"%F  %I:%M %p" )"
+  xsetroot -name "$( date +"%F %H:%M" )"
   sleep 1m
 done &
