@@ -3,7 +3,7 @@
 # Install essential software for suckless tools, assumes Debian
 sudo apt install cmake libx11-dev libxft-dev libxinerama-dev arandr -y
 
-# Clone dwm, st, demnu and surf
+# Clone dwm, st, and dmenu
 ## Make sure gits directory exists
 mkdir -p ~/Documents/gits
 cd ~/Documents/gits
